@@ -1,7 +1,27 @@
-.App{
+nav{
+  overflow: hidden;
   background-color: brown;
+  position: relative;
+  padding: 10px;
 }
 
+
+.top-nav-center{
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+li{
+  margin: 0 3px 0 3px;
+  list-style: none;
+  float: left;
+}
+.top-nav-right{
+  float: right;
+}
 .card{
   width: 18rem;
 }

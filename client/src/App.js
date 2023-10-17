@@ -1,7 +1,8 @@
 import './App.css';
 import React, {useEffect, useState} from "react"
 import Home from './components/Home';
-import { Route, Router } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   const [gifts, setGift] = useState([])
@@ -17,9 +18,10 @@ function App() {
   
   return (
     <div className="App">
-      <Router>
+      <NavBar />
+      <Routes>
         <Route path='/' element = {<Home gifts = {gifts}/>}></Route>
-      </Router>
+      </Routes>
       
     </div>
   );
