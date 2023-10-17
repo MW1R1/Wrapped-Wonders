@@ -1,6 +1,7 @@
 import './App.css';
 import React, {useEffect, useState} from "react"
 import Home from './components/Home';
+import DetailsPage from './components/DetailsPage';
 import NavBar from './components/NavBar';
 import { Route, Routes } from 'react-router-dom';
 
@@ -21,6 +22,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path='/' element = {<Home gifts = {gifts}/>}></Route>
+        <Route path='/details' element = {<DetailsPage />}></Route>
       </Routes>
       
     </div>
