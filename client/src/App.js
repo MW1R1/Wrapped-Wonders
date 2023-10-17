@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useEffect, useState} from "react"
+import Home from './components/Home';
+import { Route, Router } from 'react-router-dom';
 
 function App() {
+  const [gifts, setGift] = useState([])
+  useEffect(() => {
+    fetching()
+  },[])
+
+  const fetching = async () => {
+    const response = await fetch("/gifts")
+    const data = await response.json()
+    return setGift(data)
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Route path='/' element = {<Home gifts = {gifts}/>}></Route>
+      </Router>
+      
     </div>
   );
 }
