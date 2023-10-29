@@ -22,26 +22,58 @@ li{
 .top-nav-right{
   float: right;
 }
-.card{
-  width: 18rem;
-  text-align: center;
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
 }
 
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  padding: 0 10px 0 10px;
+}
+
+.container {
+  padding: 2px 16px;
+}
+.container p{
+  text-align: center;
+  font-size: 2rem;
+}
 .cards{
   display: flex;
   justify-content: center;
+  padding: 0 10px 0 10px;
 }
 .price{
+  text-align: center;
   color: red;
+  font-size: 1.7rem;
+  padding: 10px;
 }
 .product-buttons{
   width: 100%;
+  display: flex;
+  flex-direction: row;
 }
+
 .product-buttons button{
   width: 50%;
   margin: 0 3px 0 3px;
   border: none;
-  padding: 5px;
+  padding: 10px;
   cursor: pointer;
+  border-radius: 5px;
   background-color: blue;
+}
+.product-buttons button a{
+  text-decoration: none;
+  color: white;
+
+
+}
+.card img{
+  width: 100%;
+  height: 300px;
+
 }

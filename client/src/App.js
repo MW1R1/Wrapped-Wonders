@@ -16,13 +16,14 @@ function App() {
     const data = await response.json()
     return setGift(data)
   }
-  
+
+
   return (
     <div className="App">
       <NavBar />
       <Routes>
         <Route path='/' element = {<Home gifts = {gifts}/>}></Route>
-        <Route path='/details' element = {<DetailsPage />}></Route>
+        <Route path='/:name' element = {<DetailsPage />}></Route>
       </Routes>
       
     </div>
