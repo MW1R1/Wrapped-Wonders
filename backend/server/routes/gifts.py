@@ -10,13 +10,13 @@ def get_all_gifts():
     gift_data = GiftSchema().dump(gift_list)
     return make_response(jsonify(gift_data))
 
-@gifts.route("gifts/<int:id>", methods = ["GET"])
+@gifts.route("/gifts/<int:id>", methods = ["GET"])
 def get_each_gift(id):
     gift_data = Gift.query.filter_by(id = id).first()
     gift_list = GiftSchema().dump(gift_data)
     return make_response(jsonify(gift_list))
 
-@gifts.route("gifts/<int:id>", methods = ["DELETE"])
+@gifts.route("/gifts/<int:id>", methods = ["DELETE"])
 def delete_each_gift(id):
     gift_data = Gift.query.filter_by(id = id).first()
     db.session.delete(gift_data)
